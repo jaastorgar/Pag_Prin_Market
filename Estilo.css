@@ -1,11 +1,28 @@
+body {
+    background-color: rgb(235, 235, 235);
+}
+
 h1 {
-    background-color: gray;
-    border: 5px red ridge;
+    background-color: white;
+    border: 5px rgba(255, 170, 0, 0.701) ridge;
     text-align: center;
 }
 
 .d-block {
     width: 600px;
     height: 500px;
-    image-resolution: inherit;
+    image-resolution: 1500px;
+}
+
+.Logotipo {
+    width: 100px;
+}
+
+.btn {
+    background: rgba(255, 170, 0, 0.701);
+}
+
+.card-img-top {
+    height: 300px;
+    text-align: center;
 }
