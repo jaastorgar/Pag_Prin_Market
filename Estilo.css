@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(235, 235, 235);
+    background-color: burlywood;
 }
 
 h1 {
@@ -20,6 +20,7 @@ h1 {
 
 .btn {
     background: rgba(255, 170, 0, 0.701);
+    color: black;
 }
 
 .card-img-top {
