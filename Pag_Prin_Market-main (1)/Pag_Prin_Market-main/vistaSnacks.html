@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css\Estilo.css">
+    <title>MiniMarket</title>
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-blue">
+        <img class="Logotipo" src="img\Minimarket.png" alt="Logotipo">
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="Pag_Princ.html">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contactanos</q></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Categoria
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Snacks</a>
+                <a class="dropdown-item" href="#">Licores</a>
+                <a class="dropdown-item" href="#">Carnes</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+          </form>
+        </div>
+      </nav>
+    <h1>Snack de todo Tipo</h1>
+
+    <p class="descripcion">
+      Bienvenido a nuestra sección de snacks, donde encontrarás una gran variedad de opciones para satisfacer tus antojos entre comidas. 
+      Desde deliciosas galletas hasta saludables frutas deshidratadas, tenemos algo para todos los gustos y preferencias.
+      <br>
+      <br>
+      Si eres un amante de los sabores salados, te encantarán nuestras papas fritas, nachos, pretzels y otros snacks salados. 
+      También contamos con una selección de salsas y dips para acompañarlos, como queso cheddar, guacamole y salsa de tomate.
+      <br>
+      <br>
+      Si prefieres algo dulce, tenemos una amplia variedad de golosinas y chocolates. 
+      Prueba nuestras barras de chocolate, caramelos, gomitas y pastelitos para satisfacer tu antojo dulce.
+      <br>
+      <br>
+      Para aquellos que buscan opciones más saludables, contamos con una selección de frutas secas y nueces, perfectas para un snack nutritivo. También tenemos opciones de snacks bajos en calorías y sin gluten.
+      Explora nuestra sección de snacks y descubre tus nuevos favoritos. ¡Disfruta de tus snacks favoritos en cualquier momento y en cualquier lugar!
+    </p>
+  
+
+    <hr>
+    
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="#Salados">
+          <img class="d-block w-100" src="img\SnackSalados.webp" alt="First slide">
+          </a>   
+        </div>
+        <div class="carousel-item">
+          <a href="#Saludables">
+          <img class="d-block w-100" src="img\snackSaludables.jpg" alt="Second slide">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="#Salsas">
+          <img class="d-block w-100" src="img\Salsas.webp" alt="Third slide">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="#Dulces">
+          <img class="d-block w-100" src="img\dulces.jpg" alt="Third slide">
+          </a>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <main>
+      <section>
+        <h2 class="titulo">Dulces</h2>
+        <div class="product">
+          <img src="img\dulce1.png">
+          <img src="img\dulce2.png">
+          <img src="img\dulce3.png">
+        </div>
+        <a href="FormularioPago.html"><button class="buttonsnack">Comprar</button></a>
+      </section>
+      <section>
+        <h2 class="titulo">Saludables</h2>
+        <div class="product">
+          <img src="img\barritas-cereales.jpg">
+          <img src="img\cereales.jpg">
+          <img src="img\natural_break_barra.jpg">
+        </div>
+        <a href="FormularioPago.html"><button class="buttonsnack">Comprar</button></a>
+      </section>
+      <section>
+        <h2 class="titulo">Salados</h2>
+        <div class="product">
+          <img src="img\SnackS1.jpg">
+          <img src="img\Snacks2.jpg">
+          <img src="img\Snacks3.jpg">
+        </div>
+        <a href="FormularioPago.html"><button class="buttonsnack">Comprar</button></a>
+      </section>
+      <section>
+        <h2 class="titulo">Salsas</h2>
+        <div class="product">
+          <img src="img\salsa1.png">
+          <img src="img\salsa2.png">
+          <img src="img\salsa3.png">
+        </div>
+        <a href="FormularioPago.html"><button class="buttonsnack">Comprar</button></a>
+      </section>
+    </main>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+ 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <hr>
+
+</body>
+</html>
