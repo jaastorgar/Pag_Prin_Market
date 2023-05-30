@@ -1,0 +1,219 @@
+body {
+  background-color: burlywood;
+}
+/* .header {
+  background-color: white;
+  border: 5px rgba(255, 170, 0, 0.701) ridge;
+  text-align: center;
+} */
+.d-block {
+  width: 600px;
+  height: 500px;
+  image-resolution: 1500px;
+}
+.btn {
+  background: rgba(255, 170, 0, 0.701);
+  color: black;
+}
+.card-img-top {
+  height: 300px;
+  text-align: center;
+}
+.cuadro-texto {
+  font-size: 14px; /* tamaño de fuente */
+  width: 35px; /* ancho del cuadro de texto */
+  height: 20px; /* altura del cuadro de texto */
+}
+.formulario-tarjeta{
+  background-color:rgb(223, 172, 106);
+  width: 100%;
+  padding: 30px;
+}
+.tarjeta {
+  width: 450px;
+  background-color: #f7f7f7;
+  padding: 25px;
+  margin-left: 10px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+input[type="text"],
+input[type="email"],
+input[type="month"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 3px;
+  background-color: #ebebeb;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus {
+  outline: none;
+  background-color: #d4d4d4;
+}
+input[type="radio"] {
+  margin-right: 10px;
+}
+input[type="submit"] {
+  background-color: #16a085;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #1abc
+}
+.cvv{
+  margin-bottom: 20px;
+  width: 15%;
+}
+.product{
+ display: flex;
+ flex-wrap: wrap;
+}
+.buttonsnack{
+  margin-left: 600px;
+}
+.titulo{
+  margin-left: 600px;
+}
+.Logotipo {
+  width: 100px;
+}
+.formulario-tarjeta{
+  background-color:rgb(223, 172, 106);
+  width: 100%;
+  padding: 30px;
+}
+.tarjeta {
+  width: 450px;
+  background-color: #f7f7f7;
+  padding: 25px;
+  margin-left: 10px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+input[type="text"],
+input[type="email"],
+input[type="month"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 3px;
+  background-color: #ebebeb;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus {
+  outline: none;
+  background-color: #d4d4d4;
+}
+input[type="radio"] {
+  margin-right: 10px;
+}
+input[type="submit"] {
+  background-color: #16a085;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #1abc
+}
+.cvv{
+  margin-bottom: 20px;
+  width: 15%;
+}
+.contenedor{
+display:flex;
+flex-direction: column;
+}
+.imagen{   
+width:30%; 
+height:80%;
+margin-left: 20%;
+}
+.flex-container{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.flex{
+  width: 60%;
+  padding: 5%;
+  margin-left: 5%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+}
+.txt{
+  width: 60%;
+  margin-left: 10%;
+}
+.txt-Title{
+  width: 100%;
+  margin-left: 5%;
+}
+.boton{
+margin-left: 20%;
+background-color: rgb(61, 146, 243);
+color: black;
+border: black;
+}
+.boton2{
+margin-left: 10%;
+background-color: rgb(61, 146, 243);
+color: black;
+border: black;
+}
+.price{
+  margin-left: 30%;
+}
+.text-h3{
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.mensaje-box {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.carrusel {
+  width: 1500px;
+  margin-right: 100px;
+  margin-left: 100px;
+
+}
+
+/* .bg-light{
+  background-color: burlywood !important;
+} */
