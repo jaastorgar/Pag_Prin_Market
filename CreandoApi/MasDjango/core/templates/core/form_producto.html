@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniMarket</title>
+</head>
+<body>
+    <h1>Crear Producto</h1>
+    <div class="row">
+        <form method="post" action="" id="formulario">
+            {% csrf_token %}
+            <div class="form-group">
+            {{ form.as_table}}    
+            </div>
+
+            <input type="submit" class="btn btn-danger" id="enviar" value="Enviar">
+            <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
+            <div id="error" class="alert alert-danger" role="alert"></div>
+        </form>
+        <div class="alert alert-success" role="alert">
+            {{mensaje}}
+        </div>
+    </div>
+</body>
+</html>

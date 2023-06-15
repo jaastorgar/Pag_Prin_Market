@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniMarket</title>
+</head>
+<body>
+    <h1>Bienvenidos al MiniMarket</h1>
+    <div class="row">
+    <table border=1>
+        <tr><td>ID</td><td>NOMBRE</td><td>DESCRIPCION</td><td>PRECIO</td><td>FECHA CREACION</td><td>FECHA ACTUALIZACION</td></tr>
+        {% for ve in productos %}
+        <tr><td> {{ve.idProducto}}</td><td>{{ve.nomProducto}}</td><td>{{ve.descripcion}}</td><td>{{ve.precio}}</td><td>{{ve.fechaCreacion}}</td><td>{{ve.fechaActualizacion}}</td></tr>
+            <td><a href="{% url 'form_mod_producto' ve.idProducto %}">Modificar</a></td>
+            <td><a href="{% url 'form_del_producto' ve.idProducto %}">Eliminar</a></td>
+        {% endfor %}
+    </table>   
+    <a href="{% url 'form_producto' %}">Nuevo producto</a>
+    <br><br>
+    </div>
+</body>
+</html>
