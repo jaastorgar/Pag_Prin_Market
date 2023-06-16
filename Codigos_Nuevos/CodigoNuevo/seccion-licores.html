@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- de todas formas, prueba con bootstrap 5 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css\Estilo.css">
+    <title>MiniMarket</title>
+</head>
+<body>
+  
+  <div class="mensaje-box" id="mensaje"></div> 
+  <script>
+    function mostrarMensaje(mensaje) {
+      var mensajeBox = document.getElementById("mensaje");
+      mensajeBox.innerHTML = mensaje;
+    }
+    function redireccionar() {
+      var busqueda = document.getElementById("busqueda").value.toLowerCase();
+
+      if (busqueda === "carniceria") {
+        window.location.href = "seccion-carnes.html";
+      } else if (busqueda === "licoreria") {
+        window.location.href = "seccion-licores.html";
+      } else if (busqueda === "snacks") {
+        window.location.href = "seccion-snacks.html";
+      } else if (busqueda === "verduleria") {
+        window.location.href = "seccion-verduras.html";
+      } else if (busqueda === "Formulario") {
+        window.location.href = "FormularioPago.html";
+      } else {
+        document.getElementById("mensaje").innerHTML = "Lo siento, no se encontró ninguna tienda para tu búsqueda.";
+      }
+    }
+  </script>
+  <div class="navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-blue">
+        <img class="Logotipo" src="img/Minimarket.png" alt="Logotipo">
+      <div class="botones">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="Pag_Princ.html" style="color:white">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="API.HTML" style="color:white">recetas</q></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" style="color:white" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Categoria
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="seccion-snacks.html">Snacks</a>
+                <a class="dropdown-item" href="seccion-licores.html">Licores</a>
+                <a class="dropdown-item" href="seccion-carnes.html">Carnes</a>
+                <a class="dropdown-item" href="seccion-verduras.html">Verduleria</a>
+
+              </div>
+            </li>
+          </ul>
+        
+        <label class="busqueda" for="busqueda">¿Qué sección buscas?</label>
+        <input  class="busqueda1" type="text" id="busqueda">
+        <button onclick="redireccionar()">Buscar</button>
+      
+        <p id="mensaje"></p>
+
+        </div>
+        </div>
+      </nav>
+      </div>
+      <!-- fin menu --><hr>
+
+  </header>
+  <main>
+    <!-- inicio titulo -->
+    <div class="titulo">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="row">
+                    <h1 class="text-center">Bienvenido a la seccion de Licores</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin titulo -->
+
+    <div class="detalle-cards">
+        <div class="container">
+            <div class="row">
+                <!-- ////////////////// ingresar los datos aqui//////////////// -->
+                <div class="ofertas py-4 text-center">
+                  <p class="text-h3 display-6 py-4"><b>Nuestros Cervezas</b></p>
+                  <div class="container">
+                      <div class="row pb-4">
+                          <div class="col-md-1"></div>
+                          <div class="col-md-2">
+                              <!-- aca van los card -->
+                              <div class="card">
+                                  <img src="img/becker.jpg" class="card-img-to w-100p" alt="...">
+                                  <div class="card-body">
+                                      <h5 class="card-title">Becker</h5>
+                                      <p class="card-text">$3.390$</p>
+                                      <a href="#" class="btn btn-danger">Agregar al carro</a>
+                                  </div>
+                              </div>
+                              <!-- fin del card -->
+                          </div>
+                          <div class="col-md-2">
+                              <!-- aca van los card -->
+                              <div class="card">
+                                  <img src="img/royal.jpg" class="card-img-top w-100" alt="...">
+                                  <div class="card-body">
+                                      <h5 class="card-title">Royal</h5>
+                                      <p class="card-text">$6.590$</p>
+                                      <a href="#" class="btn btn-danger">Agregar al carro</a>
+                                  </div>
+                              </div>
+                              <!-- fin del card -->
+                          </div>
+                          <div class="col-md-2">
+                              <!-- aca van los card -->
+                              <div class="card">
+                                  <img src="img/kunstman.jpg" class="card-img- w-100top" alt="...">
+                                  <div class="card-body">
+                                      <h5 class="card-title">Kunstman</h5>
+                                      <p class="card-text">$7.750$</p>
+                                      <a href="#" class="btn btn-danger">Agregar al carro</a>
+                                  </div>
+                              </div>
+                              <!-- fin del card -->
+                          </div>
+                          <div class="col-md-2">
+                              <!-- aca van los card -->
+                              <div class="card">
+                                  <img src="img/cristal.png" class="card-img-t w-100op" alt="...">
+                                  <div class="card-body">
+                                      <h5 class="card-title">Cristal</h5>
+                                      <p class="card-text">$3.000$</p>
+                                      <a href="#" class="btn btn-danger">Agregar al carro</a>
+                                  </div>
+                              </div>
+                              <!-- fin del card -->
+                          </div>
+                          <div class="col-md-2">
+                              <!-- aca van los card -->
+                              <div class="card">
+                                  <img src="img/dark.jpg" class="card-img-top" w-100 alt="...">
+                                  <div class="card-body">
+                                      <h5 class="card-title">Dark Lagger</h5>
+                                      <p class="card-text">$3.850$</p>
+                                      <a href="#" class="btn btn-danger">Agregar al carro</a>
+                                  </div>
+                              </div>
+                              <!-- fin del card -->
+                          </div>
+                          <p class="text-h3 display-6 py-4"><b>Nuestros Piscos</b></p>
+                          <div class="col-md-1"></div>
+                      </div>
+          
+                      <div class="row pb-4">
+                          <div class="col-md-1"></div>
+                          <div class="col-md-2">
+                              <!-- aca van los card -->
+                              <div class="card">
+                                  <img src="img/Campanario.jpg" class="card-im w-100g-top" alt="...">
+                                  <div class="card-body">
+                                      <h5 class="card-title">Campanario</h5>
+                                      <p class="card-text">$4.000$</p>
+                                      <a href="#" class="btn btn-danger">Agregar al carro</a>
+                                  </div>
+                              </div>
+                              <!-- fin del card -->
+                          </div>
+                          <div class="col-md-2">
+                              <!-- aca van los card -->
+                              <div class="card">
+                                  <img src="img/alto del carmen.png" class="ca w-100rd-img-top" alt="...">
+                                  <div class="card-body">
+                                      <h5 class="card-title">Alto Del Carmen</h5>
+                                      <p class="card-text">$6.690$</p>
+                                      <a href="#" class="btn btn-danger">Agregar al carro</a>
+                                  </div>
+                              </div>
+                              <!-- fin del card -->
+                          </div>
+                          <div class="col-md-2">
+                              <!-- aca van los card -->
+                              <div class="card">
+                                  <img src="img/capel.jpg" class="card-img-top w-100" alt="...">
+                                  <div class="card-body">
+                                      <h5 class="card-title">Capel</h5>
+                                      <p class="card-text">$4.990$</p>
+                                      <a href="#" class="btn btn-danger">Agregar al carro</a>
+                                  </div>
+                              </div>
+                              <!-- fin del card -->
+                          </div>
+                          <div class="col-md-2">
+                              <!-- aca van los card -->
+                              <div class="card">
+                                  <img src="img/horcon quemado.jpg" class="car w-100d-img-top" alt="...">
+                                  <div class="card-body">
+                                      <h5 class="card-title">Horcon Quemado</h5>
+                                      <p class="card-text">$12.590$</p>
+                                      <a href="#" class="btn btn-danger">Agregar al carro</a>
+                                  </div>
+                              </div>
+                              <!-- fin del card -->
+                          </div>
+                          <div class="col-md-2">
+                              <!-- aca van los card -->
+                              <div class="card">
+                                  <img src="img/mistral.jpg" class="card-img-t w-100op" alt="...">
+                                  <div class="card-body">
+                                      <h5 class="card-title">Mistral</h5>
+                                      <p class="card-text">$9.390$</p>
+                                      <a href="#" class="btn btn-danger">Agregar al carro</a>
+                                  </div>
+                              </div>
+                              <!-- fin del card -->
+                          </div>
+                          <div class="col-md-1"></div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+  </main>
+  <footer>
+    <!-- place footer here -->
+
+    <div class="container py-4">
+        <div class="row justify-content-between">
+            <div class="col-md-4"></div>
+            
+            <div class="col-md-4 text-center">
+                <a href="Pag_Princ.html">                <button class="btn btn-danger">
+                    Volver al inicio
+                </button></a>
+
+            </div>
+
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
