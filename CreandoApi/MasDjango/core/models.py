@@ -16,7 +16,7 @@ class Productos(models.Model):
     descripcion = models.TextField(verbose_name='Descripcion del producto')
     precio = models.IntegerField(verbose_name='Precio del producto')
     fechaCreacion = models.DateTimeField(verbose_name='Fecha creacion del producto')
-    fechaActualizacion = models.DateTimeField( verbose_name='Fecha de actualizacion del producto')
+    fechaActualizacion = models.DateTimeField(verbose_name='Fecha de actualizacion del producto')
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
 
     def _str_(self):
