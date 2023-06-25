@@ -1,4 +1,5 @@
 from django.db import models
+from core.val_res import validate_fecha_creacion, validate_fecha_actualizacion
 
 
 class Categoria(models.Model):
@@ -15,8 +16,8 @@ class Productos(models.Model):
     nomProducto = models.CharField(max_length=255, verbose_name='Nombre del producto')
     descripcion = models.TextField(verbose_name='Descripcion del producto')
     precio = models.IntegerField(verbose_name='Precio del producto')
-    fechaCreacion = models.DateTimeField(verbose_name='Fecha creacion del producto')
-    fechaActualizacion = models.DateTimeField(verbose_name='Fecha de actualizacion del producto')
+    fechaCreacion = models.DateTimeField(verbose_name='Fecha creacion del producto', validators=[validate_fecha_creacion])
+    fechaActualizacion = models.DateTimeField(verbose_name='Fecha de actualizacion del producto', validators=[validate_fecha_actualizacion])
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
 
     def _str_(self):
