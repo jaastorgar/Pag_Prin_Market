@@ -53,3 +53,8 @@ class Cliente(models.Model):
     def __str__(self):
 
         return self.nombre
+    
+    def clean(self):
+        super().clean()
+        if not self.telefono.isdigit():
+            raise ValidationError("El número de teléfono debe contener solo dígitos.")
