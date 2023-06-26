@@ -1,5 +1,7 @@
+from django.core.exceptions import ValidationError
+from django.utils import timezone
 from django.db import models
-from core.val_res import validate_fecha_creacion, validate_fecha_actualizacion
+
 
 
 class Categoria(models.Model):
@@ -16,13 +18,29 @@ class Productos(models.Model):
     nomProducto = models.CharField(max_length=255, verbose_name='Nombre del producto')
     descripcion = models.TextField(verbose_name='Descripcion del producto')
     precio = models.IntegerField(verbose_name='Precio del producto')
-    fechaCreacion = models.DateTimeField(verbose_name='Fecha creacion del producto', validators=[validate_fecha_creacion])
-    fechaActualizacion = models.DateTimeField(verbose_name='Fecha de actualizacion del producto', validators=[validate_fecha_actualizacion])
+    fechaCreacion = models.DateTimeField(verbose_name='Fecha creacion del producto')
+    fechaActualizacion = models.DateTimeField(verbose_name='Fecha de actualizacion del producto')
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
 
     def _str_(self):
 
         return self.idProducto
+    
+    def save(self, *args, **kwargs):
+        self.clean()  # Llamada a la validación antes de guardar
+        super().save(*args, **kwargs)
+
+    def clean(self):
+        validate_fecha_actualizacion(self.fechaActualizacion, self)
+        validate_fecha_creacion(self.fechaCreacion)
+
+def validate_fecha_creacion(value):
+    if value > timezone.now():
+        raise ValidationError("La fecha de creación no puede ser en el futuro.")
+
+def validate_fecha_actualizacion(value, instance):
+    if value < instance.fechaCreacion:
+        raise ValidationError("La fecha de actualización no puede ser anterior a la fecha de creación.")
 
 
 class Cliente(models.Model):
