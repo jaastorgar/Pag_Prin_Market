@@ -1,10 +1,6 @@
 from django.core.exceptions import ValidationError
 from django.utils import timezone
 from django.db import models
-from django.contrib.auth.models import AbstractUser
-from django.contrib.auth import authenticate, login
-from django.views.generic import FormView
-from django.contrib.auth.forms import AuthenticationForm
 
 
 class Categoria(models.Model):
