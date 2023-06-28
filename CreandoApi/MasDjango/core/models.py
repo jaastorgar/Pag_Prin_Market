@@ -61,20 +61,3 @@ class Cliente(models.Model):
         super().clean()
         if not self.telefono.isdigit():
             raise ValidationError("El número de teléfono debe contener solo dígitos.")
-
-
-class LoginCliente(FormView):
-    template_name = 'login.html'
-    form_class = AuthenticationForm
-    success_url = '/dashboard/'
-
-    def form_valid(self, form):
-        username = form.cleaned_data['username']
-        password = form.cleaned_data['password']
-        user = authenticate(self.request, username=username, password=password)
-        if user is not None:
-            login(self.request, user)
-            return super().form_valid(form)
-        else:
-            form.add_error(None, 'Nombre de usuario o contraseña incorrectos.')
-            return self.form_invalid(form)
