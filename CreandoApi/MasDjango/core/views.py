@@ -77,16 +77,16 @@ def descargar_informe(request):
     return response
 
 def Pag_principal(request):
-    return render(request,'Pag_Princ.html') 
+    return render(request,'core/Pag_Princ.html') 
 
 def seccion_carnes (request):
-    return render(request,'seccion-carnes.html')
+    return render(request,'core/seccion-carnes.html')
 
 def seccion_licores(request):
-    return render(request,'seccion-licores.html')
+    return render(request,'core/seccion-licores.html')
 
 def seccion_snacks(request):
-    return render(request,'seccion-snacks.html')
+    return render(request,'core/seccion-snacks.html')
 
 def seccion_verduras(request):
-    return render(request,'seccion-verduras.html')
+    return render(request,'core/seccion-verduras.html')
