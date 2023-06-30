@@ -75,3 +75,18 @@ def descargar_informe(request):
     response.write(table)
 
     return response
+
+def Pag_principal(request):
+    return render(request,'Pag_Princ.html') 
+
+def seccion_carnes (request):
+    return render(request,'seccion-carnes.html')
+
+def seccion_licores(request):
+    return render(request,'seccion-licores.html')
+
+def seccion_snacks(request):
+    return render(request,'seccion-snacks.html')
+
+def seccion_verduras(request):
+    return render(request,'seccion-verduras.html')
