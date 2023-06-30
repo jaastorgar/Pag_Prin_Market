@@ -11,9 +11,6 @@ from rest_framework.decorators import api_view, permission_classes
 from django.views.decorators.csrf import csrf_exempt
 
 
-@csrf_exempt
-@api_view(['GET'])
-@permission_classes((IsAuthenticated,))
 def home(request):
     productos = Productos.objects.all()
     datos = {
@@ -58,6 +55,8 @@ def form_del_producto(request, id):
     return redirect(to="home")
 
 
+@api_view(['GET'])
+@permission_classes((IsAuthenticated,))
 def descargar_informe(request):
     trazabilidades = Trazabilidad.objects.all()
 
