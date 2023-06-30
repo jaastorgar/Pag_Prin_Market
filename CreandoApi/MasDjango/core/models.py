@@ -1,6 +1,8 @@
 from django.core.exceptions import ValidationError
 from django.utils import timezone
 from django.db import models
+import csv
+from django.http import HttpResponse
 
 
 class Categoria(models.Model):
@@ -57,3 +59,34 @@ class Cliente(models.Model):
         super().clean()
         if not self.telefono.isdigit():
             raise ValidationError("El número de teléfono debe contener solo dígitos.")
+
+class Trazabilidad(models.Model):
+    producto = models.ForeignKey(Productos, on_delete=models.CASCADE)
+    fecha = models.DateTimeField(verbose_name='Fecha de trazabilidad')
+    cantidad = models.PositiveIntegerField(verbose_name='Cantidad')
+    accion = models.CharField(max_length=100, verbose_name='Acción realizada')
+
+    def __str__(self):
+        return f'Trazabilidad de {self.producto.nomProducto} - {self.fecha}'
+    
+    def clean(self):
+        super().clean()
+
+        cantidad_actual = self.producto.cantidad
+
+        if self.cantidad > cantidad_actual:
+            raise ValidationError("La cantidad especificada en la trazabilidad es mayor a la cantidad actual del producto.")
+
+        # Realizar el descuento automático en la cantidad del producto
+        self.producto.cantidad = cantidad_actual - self.cantidad
+        self.producto.save()
+
+    def clean(self):
+        super().clean()
+        if self.fecha > timezone.now():
+            raise ValidationError("La fecha de trazabilidad no puede ser en el futuro.")    
+
+    def clean(self):
+        super().clean()
+        if self.cantidad <= 0:
+            raise ValidationError("La cantidad debe ser un número positivo.")
