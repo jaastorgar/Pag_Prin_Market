@@ -2,262 +2,178 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- de todas formas, prueba con bootstrap 5 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css\Estilo.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>MiniMarket</title>
 </head>
+
+<header id="container">
+  <div id="nav-bar">
+    <div id="nav-belt">
+      <div class="nav-left">
+        <div id="nav-logo">
+          <a href="/">LOGO</a>
+        </div>
+      </div>
+      <div class="nav-fill">
+        <div id="nav-search">
+          <form id="nav-search-bar-form">
+            <div class="nav-left">
+              <a href="">ALL</a>
+            </div>
+            <div class="nav-fill">
+              <input type="text">
+            </div>
+            <div class="nav-right">
+              <button type="submit">Search</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="nav-right">
+        <div id="nav-tools">
+          <a href="/">Language</a>
+          <a href="/">Log in</a>
+          <a href="/">Cart</a>
+        </div>
+      </div>
+    </div>
+    <div id="nav-main">
+      <!--<ul>
+        <li><a href="/">xxx</a></li>
+        <li><a href="#">Two</a>
+          <ul class="dropdown">
+            <li><a href="#">Sub-1</a></li>
+            <li><a href="#">Sub-2</a></li>
+            <li><a href="#">Sub-3</a></li>
+          </ul>
+        </li>
+      </ul>
+      -->
+    </div>
+  </div>
+</header>
+
+<br>
+<br>
+<br>
+<br>
+
 <body>
   
-  <div class="mensaje-box" id="mensaje"></div> 
-  <script>
-    function mostrarMensaje(mensaje) {
-      var mensajeBox = document.getElementById("mensaje");
-      mensajeBox.innerHTML = mensaje;
-    }
-    function redireccionar() {
-      var busqueda = document.getElementById("busqueda").value.toLowerCase();
-
-      if (busqueda === "carniceria") {
-        window.location.href = "seccion-carnes.html";
-      } else if (busqueda === "licoreria") {
-        window.location.href = "seccion-licores.html";
-      } else if (busqueda === "snacks") {
-        window.location.href = "seccion-snacks.html";
-      } else if (busqueda === "verduleria") {
-        window.location.href = "seccion-verduras.html";
-      } else if (busqueda === "Formulario") {
-        window.location.href = "FormularioPago.html";
-      } else {
-        document.getElementById("mensaje").innerHTML = "Lo siento, no se encontró ninguna tienda para tu búsqueda.";
-      }
-    }
-  </script>
-  <div class="navbar">
-    <nav class="navbar navbar-expand-lg navbar-light bg-blue">
-        <img class="Logotipo" src="img/Minimarket.png" alt="Logotipo">
-      <div class="botones">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="Pag_Princ.html" style="color:white">Inicio <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="API.HTML" style="color:white">recetas</q></a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" style="color:white" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Categoria
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="seccion-snacks.html">Snacks</a>
-                <a class="dropdown-item" href="seccion-licores.html">Licores</a>
-                <a class="dropdown-item" href="seccion-carnes.html">Carnes</a>
-                <a class="dropdown-item" href="seccion-verduras.html">Verduleria</a>
-
-              </div>
-            </li>
-          </ul>
-        
-        <label class="busqueda" for="busqueda">¿Qué sección buscas?</label>
-        <input  class="busqueda1" type="text" id="busqueda">
-        <button onclick="redireccionar()">Buscar</button>
-      
-        <p id="mensaje"></p>
-
+  <div class="container">
+    <div class="card">
+      <h2>Catálogo de Productos</h2>
+      <div class="product-grid">
+        <div class="product">
+          <div class="product-image">
+            <img src="img/cheetos.jpg" alt="Cheetos">
+          </div>
+          <div class="spacer"></div>
+          <div class="product-details">
+            <h3>Cheetos</h3>
+            <p>Descripción: Los cheetos de 110g</p>
+            <p class="price">$1.300</p>
+            <button class="add-to-cart" onclick="addToCart('cheetos', this)">Añadir al carrito</button>
+          </div>
         </div>
+        <div class="product">
+          <div class="product-image">
+            <img src="img/doritos.jpg" alt="Doritos">
+          </div>
+          <div class="spacer"></div>
+          <div class="product-details">
+            <h3>Doritos</h3>
+            <p>Descripción: El paquete de doritos</p>
+            <p class="price">$1.300</p>
+            <button class="add-to-cart" onclick="addToCart('Doritos', this)">Añadir al carrito</button>
+          </div>
         </div>
-      </nav>
+        <div class="product">
+          <div class="product-image">
+            <img src="img/lays.jpg" alt="Papas lays">
+          </div>
+          <div class="spacer"></div>
+          <div class="product-details">
+            <h3>Papas lays</h3>
+            <p>Descripción:  El paquete de papas lays</p>
+            <p class="price">$1.500</p>
+            <button class="add-to-cart" onclick="addToCart('Papas lays', this)">Añadir al carrito</button>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-image">
+            <img src="img/morocha.jpg" alt="Morocha">
+          </div>
+          <div class="spacer"></div>
+          <div class="product-details">
+            <h3>Morocha</h3>
+            <p>Descripción: Las morochas por unidad</p>
+            <p class="price">$450</p>
+            <button class="add-to-cart" onclick="addToCart('Morocha', this)">Añadir al carrito</button>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-image">
+            <img src="img/Mani-salado-160-g.jpg" alt="mani salado">
+          </div>
+          <div class="spacer"></div>
+          <div class="product-details">
+            <h3>Mani salado</h3>
+            <p>Descripción: El mani salado de 400g </p>
+            <p class="price">$1200</p>
+            <button class="add-to-cart" onclick="addToCart('mani salado', this)">Añadir al carrito</button>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-image">
+            <img src="img/dulce1.png" alt="Rolls">
+          </div>
+          <div class="spacer"></div>
+          <div class="product-details">
+            <h3>Rolls</h3>
+            <p>Descripción: El rolls de 400g </p>
+            <p class="price">$1.600</p>
+            <button class="add-to-cart" onclick="addToCart('Rolls', this)">Añadir al carrito</button>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-image">
+            <img src="img/frugele.jpg" alt="frugele">
+          </div>
+          <div class="spacer"></div>
+          <div class="product-details">
+            <h3>Frugele</h3>
+            <p>Descripción: El paquete de frugele </p>
+            <p class="price">$1.200</p>
+            <button class="add-to-cart" onclick="addToCart('Frugele', this)">Añadir al carrito</button>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-image">
+            <img src="img/dulce3.png" alt="cassata">
+          </div>
+          <div class="spacer"></div>
+          <div class="product-details">
+            <h3>Cassata</h3>
+            <p>Descripción: La cassata de 1L</p>
+            <p class="price">$1.400</p>
+            <button class="add-to-cart" onclick="addToCart('Cassata', this)">Añadir al carrito</button>
+          </div>
+        </div>
+        <!-- Agrega más elementos de producto aquí -->
       </div>
-      <!-- fin menu --><hr>
-
-  </header>
-  <main>
-    <!-- inicio titulo -->
-    <div class="titulo">
-        <div class="container">
-            <div class="col-md-12">
-                <div class="row">
-                    <h1 class="text-center">Bienvenido a la seccion de Snacks</h1>
-                </div>
-            </div>
-        </div>
     </div>
-    <!-- fin titulo -->
-
-    <div class="detalle-cards">
-        <div class="container">
-            <div class="row">
-                <!-- ////////////////// ingresar los datos aqui//////////////// -->
-                <div class="ofertas py-4 text-center">
-                  <p class="text-h3 display-6 py-4"><b>Nuestros Snack Dulces<b></p>
-                  <div class="container">
-                      <div class="row pb-4">
-                          <div class="col-md-1"></div>
-                          <div class="col-md-2">
-                              <!-- aca van los card -->
-                              <div class="card">
-                                  <img src="img/dulce1.png" class="card-img-top"  w-100alt="...">
-                                  <div class="card-body">
-                                      <h5 class="card-title">Roll</h5>
-                                      <p class="card-text">$3.390$</p>
-                                      <a href="#" class="btn btn-danger">Agregar al carro</a>
-                                  </div>
-                              </div>
-                              <!-- fin del card -->
-                          </div>
-                          <div class="col-md-2">
-                              <!-- aca van los card -->
-                              <div class="card">
-                                  <img src="img/trencito.png" class="card-img-top w-100" alt="...">
-                                  <div class="card-body">
-                                      <h5 class="card-title">Trencito</h5>
-                                      <p class="card-text">$6.590$</p>
-                                      <a href="#" class="btn btn-danger">Agregar al carro</a>
-                                  </div>
-                              </div>
-                              <!-- fin del card -->
-                          </div>
-                          <div class="col-md-2">
-                              <!-- aca van los card -->
-                              <div class="card">
-                                  <img src="img/frugele.jpg" class="card-img-top" w-100 alt="...">
-                                  <div class="card-body">
-                                      <h5 class="card-title">Frugele</h5>
-                                      <p class="card-text">$7.750$</p>
-                                      <a href="#" class="btn btn-danger">Agregar al carro</a>
-                                  </div>
-                              </div>
-                              <!-- fin del card -->
-                          </div>
-                          <div class="col-md-2">
-                              <!-- aca van los card -->
-                              <div class="card">
-                                  <img src="img/morocha.jpg" class="card-img-top" w-100 alt="...">
-                                  <div class="card-body">
-                                      <h5 class="card-title">Morocha</h5>
-                                      <p class="card-text">$3.000$</p>
-                                      <a href="#" class="btn btn-danger">Agregar al carro</a>
-                                  </div>
-                              </div>
-                              <!-- fin del card -->
-                          </div>
-                          <div class="col-md-2">
-                              <!-- aca van los card -->
-                              <div class="card">
-                                  <img src="img/super 8.jpg" class="card-img-top" w-100 alt="...">
-                                  <div class="card-body">
-                                      <h5 class="card-title">Super 8</h5>
-                                      <p class="card-text">$3.850$</p>
-                                      <a href="#" class="btn btn-danger">Agregar al carro</a>
-                                  </div>
-                              </div>
-                              <!-- fin del card -->
-                          </div>
-                          <p class="text-h3 display-6 py-4"><b>Nuestros Snack Salados</b></p>
-                          <div class="col-md-1"></div>
-                      </div>
-          
-                      <div class="row pb-4">
-                          <div class="col-md-1"></div>
-                          <div class="col-md-2">
-                              <!-- aca van los card -->
-                              <div class="card">
-                                  <img src="img/lays.jpg" class="card-img-top" al w-100t="...">
-                                  <div class="card-body">
-                                      <h5 class="card-title">Lays</h5>
-                                      <p class="card-text">$4.000$</p>
-                                      <a href="#" class="btn btn-danger">Agregar al carro</a>
-                                  </div>
-                              </div>
-                              <!-- fin del card -->
-                          </div>
-                          <div class="col-md-2">
-                              <!-- aca van los card -->
-                              <div class="card">
-                                  <img src="img/cheetos.jpg" class="card-img-top" w-100 alt="...">
-                                  <div class="card-body">
-                                      <h5 class="card-title">Cheetos</h5>
-                                      <p class="card-text">$6.690$</p>
-                                      <a href="#" class="btn btn-danger">Agregar al carro</a>
-                                  </div>
-                              </div>
-                              <!-- fin del card -->
-                          </div>
-                          <div class="col-md-2">
-                              <!-- aca van los card -->
-                              <div class="card">
-                                  <img src="img/Mani-salado-160-g.jpg" class="car w-100d-img-top" alt="...">
-                                  <div class="card-body">
-                                      <h5 class="card-title">Mani Salado</h5>
-                                      <p class="card-text">$4.990$</p>
-                                      <a href="#" class="btn btn-danger">Agregar al carro</a>
-                                  </div>
-                              </div>
-                              <!-- fin del card -->
-                          </div>
-                          <div class="col-md-2">
-                              <!-- aca van los card -->
-                              <div class="card">
-                                  <img src="img/ramitas.jpg" class="card-img-top" w-100 alt="...">
-                                  <div class="card-body">
-                                      <h5 class="card-title">Ramitas</h5>
-                                      <p class="card-text">$12.590$</p>
-                                      <a href="#" class="btn btn-danger">Agregar al carro</a>
-                                  </div>
-                              </div>
-                              <!-- fin del card -->
-                          </div>
-                          <div class="col-md-2">
-                              <!-- aca van los card -->
-                              <div class="card">
-                                  <img src="img/doritos.jpg" class="card-img-top" w-100 alt="...">
-                                  <div class="card-body">
-                                      <h5 class="card-title">Doritos</h5>
-                                      <p class="card-text">$9.390$</p>
-                                      <a href="#" class="btn btn-danger">Agregar al carro</a>
-                                  </div>
-                              </div>
-                              <!-- fin del card -->
-                          </div>
-                          <div class="col-md-1"></div>
-                      </div>
-                  </div>
-              </div>
-            </div>
-        </div>
+    <div class="cart" id="cart-container" style="display: none;">
+      <h2>Carrito de Compras</h2>
+      <ul id="cart-items"></ul>
+      <p id="cart-total"></p>
+      <button class="checkout" onclick="checkout()">Realizar Compra</button>
     </div>
+  </div>
 
-  </main>
-  <footer>
-    <!-- place footer here -->
-
-    <div class="container py-4">
-        <div class="row justify-content-between">
-            <div class="col-md-4"></div>
-            
-            <div class="col-md-4 text-center">
-                <a href="Pag_Princ.html">                <button class="btn btn-danger">a
-                    Volver al inicio
-                </button></a>
-
-            </div>
-
-            <div class="col-md-4"></div>
-        </div>
-    </div>
-
-  </footer>
-  <!-- Bootstrap JavaScript Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-  </script>
+  <script src="Scripts/scrip.js"></script>
+  
 </body>
 
 </html>
