@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- de todas formas, prueba con bootstrap 5 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="{%static 'core/css/Estilo.css'%}">
 
     <title>MiniMarket</title>
 </head>
 <body>
-  
+  {% load static %}
   <div class="mensaje-box" id="mensaje"></div> 
   <script>
     function mostrarMensaje(mensaje) {
@@ -38,7 +37,7 @@
   </script>
   <div class="navbar">
     <nav class="navbar navbar-expand-lg navbar-light bg-blue">
-      {% load static %}  
+        
       <div class="row">
         <img class="Logotipo" src="{% static 'core/img/img/Minimarket.png'%}" alt="Logotipo">
         </div>
