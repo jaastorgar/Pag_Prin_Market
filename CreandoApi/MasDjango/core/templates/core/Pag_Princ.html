@@ -56,13 +56,10 @@
                 Categoria
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{% url 'informes:seccion_snacks' %}">Snacks</a>
-                <a class="dropdown-item" href="{% url 'informes:seccion_licores' %}">Licores</a>
-                <a class="dropdown-item" href="{% url 'informes:seccion_carnes' %}">Carnes</a>
-                <a class="dropdown-item" href="{% url 'informes:seccion_verduras' %}">Verduleria</a>
-
-
-
+                <a class="dropdown-item" href="{% url 'seccion_snacks' %}">Snacks</a>
+                <a class="dropdown-item" href="{% url 'seccion_licores' %}">Licores</a>
+                <a class="dropdown-item" href="{% url 'seccion_carnes' %}">Carnes</a>
+                <a class="dropdown-item" href="{% url 'seccion_verduras' %}">Verduleria</a>
               </div>
             </li>
           </ul>
@@ -116,7 +113,7 @@
       <div class="card-body">
         <h5 class="card-title">Carniceria</h5>
         <p class="card-text">Aca encontrara todo tipo de carnes. <br> Carnes de ave, carnes de vacuna y carne de cerdo.</p>
-        <a href="seccion-carnes.html" class="btn btn-primary" style="color:white;">Vamos!</a>
+        <a href="{% url 'seccion_carnes' %}" class="btn btn-primary" style="color:white;">Vamos!</a>
       </div>
     </div>
     <div class="col 4" style="width: 18rem;">
