@@ -13,5 +13,5 @@ urlpatterns = [
     path('seccion_carnes',seccion_carnes, name="seccion_carnes"),
     path('seccion_licores',seccion_licores,name="seccion_licores"),
     path('seccion_snacks',seccion_snacks, name="seccion_snacks"),
-    path('seccion_verduras',seccion_verduras, name="seccion_verduras"),
+    path('seccion_verduras_',seccion_verduras, name="seccion_verduras"),
 ]
