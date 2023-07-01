@@ -56,10 +56,12 @@
                 Categoria
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="seccion-snacks.html">Snacks</a>
-                <a class="dropdown-item" href="seccion-licores.html">Licores</a>
-                <a class="dropdown-item" href="seccion-carnes.html">Carnes</a>
-                <a class="dropdown-item" href="seccion-verduras.html">Verduleria</a>
+                <a class="dropdown-item" href="{% url 'informes:seccion_snacks' %}">Snacks</a>
+                <a class="dropdown-item" href="{% url 'informes:seccion_licores' %}">Licores</a>
+                <a class="dropdown-item" href="{% url 'informes:seccion_carnes' %}">Carnes</a>
+                <a class="dropdown-item" href="{% url 'informes:seccion_verduras' %}">Verduleria</a>
+
+
 
               </div>
             </li>
