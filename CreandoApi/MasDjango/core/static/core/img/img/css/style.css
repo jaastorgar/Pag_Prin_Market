@@ -1,0 +1,365 @@
+:root {
+	--main-header-bg: #232f3e;
+	--second-header-bg: #131921;
+	--main-border: #ff9000;
+	--main-border-shadow: #febd69;
+	--main-text: #f3a847;
+	--second-text: white;
+	--main-search-opt: #cdcdcd;
+	--second-search-opt: #f3f3f3;
+	--border-radius: 0.2rem;
+	background: black;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+header {
+	background: var(--main-header-bg);
+	height: 5rem;
+	font-size: 1rem;
+	display: flex;
+}
+
+#nav-bar {
+	display: flex;
+	flex-flow: column nowrap;
+	flex: 1;
+}
+
+#nav-belt {
+	display: flex;
+	height: 3.5rem;
+	width: 100%;
+	background: var(--second-header-bg);
+}
+
+#nav-belt > .nav-left {
+	box-sizing: border-box;
+	display: flex;
+}
+
+#nav-logo {
+	box-sizing: border-box;
+	display: flex;
+	padding: 0.5rem 0 0.5rem 0.5rem;
+}
+
+#nav-logo > a {
+	box-sizing: content-box;
+	display: flex;
+	align-items: center;
+	padding: 0 0.5rem 0 0.5rem;
+	margin: 0.1rem;
+}
+
+#nav-logo > a:hover {
+	border: 0.1rem solid var(--main-border);
+	border-radius: var(--border-radius);
+	margin: 0;
+	color: var(--main-text);
+	box-shadow: 0rem 0rem 0.3rem var(--main-border-shadow);
+}
+
+#nav-belt > .nav-fill {
+	box-sizing: border-box;
+	display: flex;
+	flex: 1 1 auto;
+}
+
+#nav-search {
+	box-sizing: border-box;
+	width: auto;
+	display: flex;
+	flex: 1 1 auto;
+	padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+	overflow: hidden;
+}
+
+#nav-search-bar-form {
+	box-sizing: border-box;
+	display: flex;
+	flex: 1 1 auto;
+	border-radius: var(--border-radius);
+	overflow: hidden;
+}
+
+#nav-search-bar-form:focus-within {
+	box-sizing: border-box;
+	border: 0.2rem solid var(--main-border);
+	margin: 0 -0.2rem 0 -0.2rem;
+	box-shadow: 0rem 0rem 0.3rem var(--main-border-shadow);
+}
+
+#nav-search-bar-form .nav-left {
+	box-sizing: border-box;
+	display: flex;
+	background: var(--second-search-opt);
+	align-items: center;
+}
+
+#nav-search-bar-form .nav-left a {
+	display: flex;
+	color: black;
+	padding: 0 0.5rem 0 0.5rem;
+	flex: 1 1 auto;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+}
+
+#nav-search-bar-form .nav-left a:hover {
+	background: var(--main-search-opt);
+}
+
+#nav-search-bar-form .nav-fill {
+	box-sizing: border-box;
+	display: flex;
+	flex: 1 1 auto;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	background: white;
+	border-left: 0.1rem solid var(--main-search-opt);
+	border-right: 0.1rem solid var(--main-text);
+}
+
+#nav-search-bar-form .nav-fill input {
+	box-sizing: border-box;
+	flex: 1 1 auto;
+	padding: 0;
+	font-size: 1rem;
+	text-indent: 0.5rem;
+	border: 0;
+}
+
+#nav-search-bar-form .nav-fill > input:focus {
+	outline: none;
+}
+
+#nav-search-bar-form .nav-right {
+	box-sizing: border-box;
+	display: flex;
+	background: var(--main-border-shadow);
+	align-items: center;
+}
+
+#nav-search-bar-form .nav-right > button {
+	display: flex;
+	flex: 1 1 auto;
+	align-items: center;
+	border: 0;
+	background: var(--main-border-shadow);
+	width: 100%;
+	height: 100%;
+	padding: 0 0.5rem 0 0.5rem;
+	cursor: pointer;
+}
+
+#nav-search-bar-form .nav-right > button:hover {
+	background: var(--main-text);
+}
+
+#nav-belt > .nav-right {
+	box-sizing: border-box;
+	display: flex;
+}
+
+#nav-tools {
+	display: flex;
+	flex: 1 1 auto;
+	padding: 0.5rem 0.5rem 0.5rem 0;
+}
+
+#nav-tools > a {
+	box-sizing: border-box;
+	display: flex;
+	flex: 1 1 auto;
+	align-items: center;
+	padding: 0 0.5rem 0 0.5rem;
+	margin: 0.1rem;
+}
+
+#nav-tools > a:hover {
+	border: 0.1rem solid var(--main-border);
+	border-radius: var(--border-radius);
+	margin: 0;
+	color: var(--main-text);
+	box-shadow: 0rem 0rem 0.3rem var(--main-border-shadow);
+}
+
+/**#nav-main {
+	display: flex;
+}
+
+#nav-main > ul {
+	display: flex;
+}
+
+li {
+ display: block;
+ transition-duration: 0.5s;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+}*/
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f2f2f2;
+  }
+  /* Establece el estilo de la página en general, como la fuente, los márgenes, el relleno y el color de fondo */
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  /* Define un contenedor para centrar el contenido verticalmente en la página */
+  
+  .card {
+    padding: 20px;
+    border-radius: 5px;
+  }
+  /* Establece los estilos para una tarjeta genérica, como el relleno y el radio de borde */
+  
+  h1, h2, h3 {
+    text-align: center;
+    color: #333;
+  }
+  /* Establece el estilo de los encabezados h1, h2, h3, alineándolos al centro y definiendo el color de texto */
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin-top: 20px;
+  }
+  /* Crea una cuadrícula de productos con 4 columnas, establece el espacio entre las celdas y el margen superior */
+  
+  .product {
+    width: 205px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
+  }
+  /* Define los estilos de un producto individual en la cuadrícula, como el tamaño, la alineación, el relleno, el radio de borde, el color de fondo y la sombra */
+  
+  .product-image {
+    width: 205px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Establece los estilos para la imagen del producto, como el tamaño y la alineación */
+  
+  .product-image img {
+    max-width: 205px;
+    max-height: 170px;
+    object-fit: cover;
+    border-radius: 5px;
+
+  }
+  /* Establece los estilos para la imagen del producto en sí, como el tamaño máximo, el ajuste de objeto y el radio de borde */
+  
+  .spacer {
+    width: 245px;
+    height: 4px;
+    background-color: rgba(0, 0, 0, 0.336);
+  }
+  /* Crea un espacio separador horizontal con un ancho y alto específico y un color de fondo */
+  
+  .product-details {
+    flex-grow: 1;
+  }
+  /* Define el estilo para los detalles del producto, permitiendo que crezcan para ocupar el espacio disponible */
+  
+  .price {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  /* Establece los estilos para el precio del producto, como el peso de la fuente, el tamaño y el margen superior */
+  
+  .add-to-cart {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  /* Establece los estilos para el botón "Agregar al carrito", como el color de fondo, el color de texto, el borde, el radio de borde, el relleno, el margen superior, el cursor y la transición al pasar el ratón sobre él */
+  
+  .cart {
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-left: 20px;
+  }
+  /* Establece los estilos para el carrito de compras, como el ancho máximo, el relleno, el color de fondo, el radio de borde y el margen izquierdo */
+  
+  .cart h2 {
+    text-align: center;
+    color: #333;
+  }
+  /* Establece los estilos para el encabezado del carrito de compras, como la alineación al centro y el color de texto */
+  
+  .cart-items {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  /* Establece los estilos para los elementos del carrito de compras, como el tipo de lista, el relleno y el margen superior */
+  
+  .checkout {
+    display: block;
+    margin: 20px auto;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  /* Establece los estilos para el botón de pago, como la visualización en bloque, el margen y la alineación automática, el color de fondo, el color de texto, el borde, el radio de borde, el relleno, el cursor y la transición al pasar el ratón sobre él */
+  
