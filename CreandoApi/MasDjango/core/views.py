@@ -90,3 +90,16 @@ def seccion_snacks(request):
 
 def seccion_verduras(request):
     return render(request,'core/seccion-verduras.html')
+
+def vista_base(request):
+
+    objetos = Productos.objects.all()
+
+    objetos_filtrados = Productos.objects.filter(nomProducto='valor')
+
+    context = {
+    'objetos': objetos,
+    'objetos_filtrados': objetos_filtrados,
+    }
+
+    return render(request, 'core/seccion-carnes.html', context)

@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import home, form_producto, form_mod_producto, form_del_producto, descargar_informe, Pag_principal, seccion_carnes, seccion_licores, seccion_snacks, seccion_verduras
+from .views import home, form_producto, form_mod_producto, form_del_producto, descargar_informe, Pag_principal, seccion_carnes, seccion_licores, seccion_snacks, seccion_verduras, vista_base
 
 
 urlpatterns = [
@@ -13,4 +13,5 @@ urlpatterns = [
     path('seccion_licores/', seccion_licores,name="seccion_licores"),
     path('seccion_snacks/', seccion_snacks, name="seccion_snacks"),
     path('seccion_verduras/', seccion_verduras, name="seccion_verduras"),
+    path('vista-base/', vista_base, name="vista_base"),
 ]
